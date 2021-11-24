@@ -110,7 +110,7 @@ body {
 .about-div {
   height: 100vh;
   position: relative;
-  padding-top: 9rem;
+  padding-top: 5rem;
 }
 
 .title {
@@ -131,6 +131,7 @@ body {
 
 .about-img-div img {
   height: 22rem;
+  object-fit: contain;
 }
 
 .hidden-image-style {
@@ -210,10 +211,29 @@ body {
 .portfolio-page {
   height: 100vh;
   position: relative;
-  padding-top: 9rem;
+  padding-top: 5rem;
 }
 
 .portfolio-info-text {
-  width: 50rem;
+  width: 40rem;
   color: whitesmoke;
+  padding-bottom: 3rem;
+}
+
+.portfolio-photo2 {
+  width: 50rem;
+  object-position: top;
+}
+
+.portfolio-photo-div {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  height: 35rem;
+  width: 100%;
+  display: flex;
+}
+
+.portfolio-photo-div img {
+  object-fit: cover;
 }
