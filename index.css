@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/* REUSABLE STYLES BELOW*/
+
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-right {
+  justify-content: right;
+}
+.justify-left {
+  justify-content: left;
+}
+.grow {
+  flex: 1;
+}
+.column {
+  flex-direction: column;
+}
+.fullwidth {
+  width: 100%;
+}
+.text-align-center {
+  text-align: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-row {
+  flex-direction: row;
+}
+.padding {
+  padding: 1rem;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.grayscale {
+  filter: grayscale(0);
+}
+
+/* Body styles below */
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgb(48, 48, 48);
+  font-family: "Abril Fatface", cursive;
+  color: rgba(245, 245, 245, 0.836);
+  padding-left: 13rem;
+}
+
+.CVphoto {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.CVphoto-div {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.photo-text h1,
+h2 {
+  font-weight: normal;
+}
+
+.photo-text {
+  padding-left: 5rem;
+  padding-top: 12rem;
+  font-size: 3rem;
+  z-index: 1;
+  line-height: 8rem;
+  align-items: unset;
+  text-shadow: 5px 5px 20px #000000;
+}
+
+.photo-text h1::first-letter {
+  color: #465fcc;
+}
+
+.about-div {
+  height: 100vh;
+  position: relative;
+}
+
+.about-title {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 5rem;
+}
+
+.about-img-div img {
+  height: 15rem;
+}
+
+.about-img-div {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.logo {
+  height: 10em;
+  width: auto;
+  margin-bottom: 10rem;
+}
+
+.aside-element {
+  z-index: 1;
+  width: 13rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  background-color: rgb(46, 46, 46);
+  color: rgb(221, 221, 221);
+  overflow: hidden;
+}
+
+.aside-element ul li {
+  display: flex;
+  list-style: none;
+  padding: 2rem;
+  border-top: 0.1rem solid rgb(94, 94, 94);
+  width: 13rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.aside-element ul li:hover {
+  color: teal;
+}
+
+.aside-element ul:last-child {
+  border-bottom: 0.1rem solid rgb(94, 94, 94);
+}
