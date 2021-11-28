@@ -84,22 +84,26 @@ body {
 .photo-text h2 {
   font-weight: 100;
   font-size: 2rem;
+  transition: all 1s;
+}
+
+.photo-text::first-line {
+  font-size: 6rem;
+  line-height: 7rem;
 }
 
 .photo-text {
-  padding-left: 5rem;
-  padding-top: 17rem;
-  font-size: 3rem;
+  display: block;
+  margin-left: 5rem;
+  margin-top: 17rem;
+  font-size: 5rem;
   z-index: 1;
-  line-height: 5rem;
-  font-family: "Manrope", sans-serif;
+  font-family: "M PLUS 1", sans-serif;
+  transition: all 1s;
+  white-space: pre-line;
 }
 
-.hidden-photo-style {
-  font-size: 6.5rem;
-  color: rgb(138, 85, 224);
-}
-.hidden-photo-style2 {
+.photo-text:hover {
   color: rgb(138, 85, 224);
 }
 
@@ -117,13 +121,14 @@ body {
   font-size: 3rem;
   font-family: "M PLUS 1", sans-serif;
   color: #aab6e9;
+  transition: all 2s;
 }
 
-.hidden-title-style {
-  color: rgb(138, 85, 224);
+.about-img-div i {
+  color: rgba(255, 255, 255, 0.973);
 }
 
-.hidden-title2-style {
+.title:hover {
   color: rgb(138, 85, 224);
 }
 
@@ -141,6 +146,10 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+}
+
+.about-img-div::-webkit-scrollbar {
+  display: none !important;
 }
 
 .about-me-text-div {
@@ -184,7 +193,7 @@ body {
   right: auto;
   bottom: 0;
   background-color: rgb(31, 31, 31);
-  color: rgb(221, 221, 221);
+  color: rgb(182, 182, 182);
   overflow: hidden;
 }
 
@@ -192,7 +201,7 @@ body {
   display: flex;
   list-style: none;
   padding: 2rem;
-  border-top: 0.1rem solid rgb(92, 91, 91);
+  border-top: 0.1rem solid rgb(75, 75, 75);
   width: 13rem;
   align-items: center;
   justify-content: center;
@@ -205,7 +214,7 @@ body {
 }
 
 .aside-element ul:last-child {
-  border-bottom: 0.1rem solid rgb(94, 94, 94);
+  border-bottom: 0.1rem solid rgb(75, 75, 75);
 }
 
 /* PORTFOLIOPAGE STYLES BELOW */
@@ -235,6 +244,9 @@ body {
   width: 100%;
   display: flex;
 }
+.portfolio-photo-div::-webkit-scrollbar {
+  width: 0 !important;
+}
 
 .portfolio-photo-div img {
   object-fit: cover;
@@ -250,10 +262,67 @@ body {
 .map {
   height: 29rem;
   margin-bottom: 15rem;
-  margin-left: 3rem;
+  margin-left: 7rem;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
+  width: 32rem;
+}
+
+.contact-form input {
+  height: 2.5rem;
+  background-color: white;
+  border: none;
+}
+
+.contact-form label {
+  margin-top: 0.6rem;
+  margin-bottom: 0.3rem;
+
+  font-weight: bold;
+}
+
+.contact-form input:last-child {
+  height: 20rem;
+}
+
+.leftarrow {
+  position: absolute;
+  color: #ffffff;
+  left: 0;
+  margin: auto;
+  align-self: center;
+  font-size: x-large;
+  color: rgba(255, 255, 255, 0.493);
+  margin-left: 0.2rem;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
+}
+
+.rightarrow {
+  position: absolute;
+  color: #ffffff;
+  right: 0;
+  margin: auto;
+  align-self: center;
+  font-size: x-large;
+  color: rgba(255, 255, 255, 0.493);
+  margin-right: 0.2rem;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
+}
+
+.hidden-arrow-style {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.rightarrow:hover,
+.leftarrow:hover {
+  font-size: xx-large;
+  color: rgba(255, 255, 255, 0.808);
 }

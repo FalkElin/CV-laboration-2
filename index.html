@@ -10,22 +10,23 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@900&display=swap");
     </style>
+    <script
+      src="https://kit.fontawesome.com/866be69ded.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <aside class="flex column aside-element">
       <img class="logo" src="./images/logo7.png" alt="" srcset="" />
       <ul>
-        <li>Home</li>
+        <li id="homebutton">Home</li>
         <li id="aboutbutton">About me</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li id="portfoliobutton">Portfolio</li>
+        <li id="contactbutton">Contact</li>
       </ul>
     </aside>
-    <div class="CVphoto-div flex">
-      <div class="absolute flex column photo-text">
-        <h1 id="home-page-text">Elin Falk</h1>
-        <h2 id="home-page-second-text">Front-end developer</h2>
-      </div>
+    <div id="home-page" class="CVphoto-div flex">
+      <div class="absolute flex column photo-text"></div>
       <img
         id="home-page-photo"
         class="CVphoto grayscale"
@@ -68,12 +69,17 @@
           </p>
         </div>
       </div>
-      <div class="flex about-img-div">
+      <div class="flex about-img-div scroll-container">
         <img src="./images/love.jpg" alt="" />
-        <img src="./images/sunflowers.jpeg" alt="" />
-        <img src="./images/beach.jpeg" alt="" />
-        <img src="./images/forest.jpg" alt="" />
+
+        <img src="./images/skogen.png" alt="" />
+        <img src="./images/stationen.jpg" alt="" />
+        <img src="./images/hovis.jpg" alt="" />
+
         <img src="./images/me.jpg" alt="" />
+
+        <i class="fas fa-chevron-left arrow-button-left leftarrow"></i>
+        <i class="fas fa-chevron-right arrow-button-right rightarrow"></i>
       </div>
     </div>
     <div id="portfolio-page" class="flex column about-div">
@@ -90,7 +96,7 @@
           </p>
         </div>
       </div>
-      <div class="portfolio-photo-div">
+      <div class="portfolio-photo-div scroll-container">
         <img
           class="portfolio-photo"
           src="./images/spotify.png"
@@ -104,6 +110,8 @@
           srcset=""
         />
         <img src="./images/log-in-page.png" alt="" srcset="" />
+        <i class="fas fa-chevron-left arrow-button-left leftarrow"></i>
+        <i class="fas fa-chevron-right arrow-button-right rightarrow"></i>
       </div>
     </div>
     <div id="contact-page" class="flex column about-div">
@@ -119,13 +127,13 @@
         </div>
       </div>
       <div class="contact-page flex">
-        <div class="contact-form">
-          <form>
-            <label for="name">name</label>
+        <div>
+          <form class="contact-form flex column">
+            <label for="name">Name</label>
             <input type="text" name="name" />
-            <label for="email">email-adress</label>
+            <label for="email">Email-adress</label>
             <input type="text" name="email-adress" />
-            <label for="email">message</label>
+            <label for="email">Message</label>
             <input type="text" name="message" />
           </form>
         </div>

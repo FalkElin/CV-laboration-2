@@ -7,72 +7,112 @@ function main() {
 /** declares event like onclick, onmouseleave on specified elements */
 function addEventListeners() {
   const aboutbutton = document.getElementById("aboutbutton");
-  aboutbutton.onclick = scrollToSecondPage;
+  aboutbutton.onclick = () => scrollToSection("about-page");
 
-  const HomePageText = document.getElementById("home-page-text");
-  HomePageText.onmouseover = changeTextOnHover;
-  HomePageText.onmouseleave = changeTextBack;
+  const portfoliobutton = document.getElementById("portfoliobutton");
+  portfoliobutton.onclick = () => scrollToSection("portfolio-page");
 
-  const Title = document.getElementById("title");
-  Title.onmouseover = changeTitle;
-  Title.onmouseleave = changeTitleBack;
+  const contactbutton = document.getElementById("contactbutton");
+  contactbutton.onclick = () => scrollToSection("contact-page");
 
-  const Title2 = document.getElementById("title2");
-  Title2.onmouseover = changeTitle2;
-  Title2.onmouseleave = changeTitleBack2;
+  const homebutton = document.getElementById("homebutton");
+  homebutton.onclick = () => scrollToSection("home-page");
 
-  const text2 = document.getElementById("home-page-second-text");
-  text2.onmouseover = changeSecondTextOnHover;
-  text2.onmouseleave = changeSecondTextBack;
+  typeWriter();
+
+  const HomePageText = document.querySelector(".photo-text");
+  HomePageText.onmouseover = () => changeImageOnHover(".photo-text");
+  HomePageText.onmouseleave = () => changeImageBackOnHover(".photo-text");
+
+  const horizontalScrollPortfolioPage = document.querySelector(
+    ".portfolio-photo-div"
+  );
+  horizontalScrollPortfolioPage.onscroll = handleScroll;
+
+  const horizontalScrollAboutPage = document.querySelector(".about-img-div");
+  horizontalScrollAboutPage.onscroll = handleScroll;
+
+  let arrowButtonLeft = document.getElementsByClassName("arrow-button-left");
+  for (let i = 0; i < arrowButtonLeft.length; i++) {
+    arrowButtonLeft[i].onclick = scrollLeft;
+  }
+
+  let arrowButtonRight = document.getElementsByClassName("arrow-button-right");
+  for (let i = 0; i < arrowButtonRight.length; i++) {
+    arrowButtonRight[i].onclick = scrollRight;
+  }
 }
 
-function scrollToSecondPage() {
-  document.getElementById("about-page").scrollIntoView({ behavior: "smooth" });
+function scrollToSection(nextSection) {
+  document.getElementById(nextSection).scrollIntoView({ behavior: "smooth" });
 }
 
-function changeTextOnHover() {
-  const element = document.getElementById("home-page-text");
-  element.classList.add("hidden-photo-style");
-  element.style.transition = "all 1s";
+function changeTextOnHover(changeText) {
+  document.getElementById(changeText).classList.add("hidden-photo-style");
+}
+
+function changeImageOnHover() {
   const photo = document.getElementById("home-page-photo");
   photo.classList.add("hidden-image-style");
-  photo.style.transition = "2s";
+  photo.style.transition = "1s";
 }
 
-function changeTextBack() {
-  const element = document.getElementById("home-page-text");
-  element.classList.remove("hidden-photo-style");
+function changeImageBackOnHover() {
+  const photo = document.getElementById("home-page-photo");
+  photo.classList.remove("hidden-image-style");
+  photo.style.transition = "20s";
 }
 
-function changeSecondTextOnHover() {
-  const element = document.getElementById("home-page-second-text");
-  element.classList.add("hidden-photo-style");
-  element.style.transition = "all 2s";
+//Scroll function shows and hides arrows
+function handleScroll(e) {
+  const offset = 50;
+  const left = 0;
+  const right = e.target.scrollWidth - e.target.clientWidth;
+  const scroll = e.target.scrollLeft;
+  const rightArrow = e.target.querySelector(".arrow-button-right");
+  const leftArrow = e.target.querySelector(".arrow-button-left");
+
+  if (scroll > left + offset) {
+    leftArrow.classList.add("hidden-arrow-style");
+  } else {
+    leftArrow.classList.remove("hidden-arrow-style");
+  }
+
+  if (scroll === left) {
+    rightArrow.classList.add("hidden-arrow-style");
+  }
+  if (scroll === right) {
+    rightArrow.classList.remove("hidden-arrow-style");
+  } else if (scroll > offset) {
+    rightArrow.classList.add("hidden-arrow-style");
+  } else {
+    rightArrow.classList.remove("hidden-arrow-style");
+  }
 }
 
-function changeSecondTextBack() {
-  const element = document.getElementById("home-page-second-text");
-  element.classList.remove("hidden-photo-style");
+//makes arrow onclick scroll left or right
+function scrollLeft(e) {
+  let container = e.target.closest(".scroll-container");
+  container.scrollLeft -= container.clientWidth;
 }
 
-function changeTitle() {
-  const element = document.getElementById("title");
-  element.classList.add("hidden-title-style");
-  element.style.transition = "all 2s";
+function scrollRight(e) {
+  let container = e.target.closest(".scroll-container");
+  container.scrollLeft += container.clientWidth;
 }
 
-function changeTitleBack() {
-  const element = document.getElementById("title");
-  element.classList.remove("hidden-title-style");
-}
+var i = 0;
+var text = `Elin Falk,
+ front end-devloper`;
+var speed = 100;
 
-function changeTitle2() {
-  const element = document.getElementById("title2");
-  element.classList.add("hidden-title2-style");
-  element.style.transition = "all 2s";
-}
+console.log(text);
 
-function changeTitleBack2() {
-  const element2 = document.getElementById("title2");
-  element2.classList.remove("hidden-title2-style");
+function typeWriter() {
+  if (i < text.length) {
+    document.querySelector(".photo-text").innerHTML += text.charAt(i);
+    i++;
+
+    setTimeout(typeWriter, speed);
+  }
 }
