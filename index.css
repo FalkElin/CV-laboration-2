@@ -81,26 +81,23 @@ body {
   position: relative;
 }
 
-.photo-text h2 {
-  font-weight: 100;
-  font-size: 2rem;
-  transition: all 1s;
-}
-
 .photo-text::first-line {
-  font-size: 6rem;
+  font-size: 11rem;
   line-height: 7rem;
+  font-family: "Praise", cursive;
+  color: whitesmoke;
 }
 
 .photo-text {
   display: block;
   margin-left: 5rem;
   margin-top: 17rem;
-  font-size: 5rem;
+  font-size: 3.5rem;
   z-index: 1;
   font-family: "M PLUS 1", sans-serif;
   transition: all 1s;
   white-space: pre-line;
+  font-weight: lighter;
 }
 
 .photo-text:hover {
@@ -207,6 +204,7 @@ body {
   justify-content: center;
   cursor: pointer;
   font-weight: lighter;
+  transition: all 0.15s;
 }
 
 .aside-element ul li:hover {

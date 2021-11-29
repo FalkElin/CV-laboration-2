@@ -4,7 +4,7 @@ function main() {
   addEventListeners();
 }
 
-/** declares event like onclick, onmouseleave on specified elements */
+/** declares events like onclick, onmouseleave on specified elements */
 function addEventListeners() {
   const aboutbutton = document.getElementById("aboutbutton");
   aboutbutton.onclick = () => scrollToSection("about-page");
@@ -101,10 +101,10 @@ function scrollRight(e) {
   container.scrollLeft += container.clientWidth;
 }
 
-var i = 0;
-var text = `Elin Falk,
+let i = 0;
+let text = `Elin Falk,
  front end-devloper`;
-var speed = 100;
+let speed = 100;
 
 console.log(text);
 
