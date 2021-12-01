@@ -1,0 +1,22 @@
+/* NOTES!
+Following styling is showed on screens equal or smaller than 1366px.
+*/
+
+@media (max-width: 1366px) {
+  .photo-text h1 {
+    font-size: 10rem;
+    line-height: 4.5rem;
+  }
+  .photo-text h2 {
+    font-size: 2.5rem;
+    line-height: 8rem;
+  }
+  .CVphoto {
+    width: 100%;
+  }
+
+  .photo-text {
+    margin-top: 16rem;
+    font-size: 3rem;
+  }
+}

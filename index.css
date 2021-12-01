@@ -1,3 +1,8 @@
+/* NOTES!
+This CSS file contains styling when showed on a screen bigger than 1200px.
+This CSS file is the foundation to the styling for smaller screens, such as laptop, tablet, mobile and xs-mobile.
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -81,27 +86,31 @@ body {
   position: relative;
 }
 
-.photo-text::first-line {
-  font-size: 11rem;
-  line-height: 7rem;
+.photo-text h1 {
+  font-size: 13rem;
   font-family: "Praise", cursive;
-  color: whitesmoke;
+  color: rgb(198, 202, 255);
+  font-weight: unset;
+  transition: all 1s;
+  line-height: 9rem;
+}
+
+.photo-text h2 {
+  transition: all 1s;
+}
+
+.photo-text h1:hover,
+h2:hover {
+  color: #7859ff;
 }
 
 .photo-text {
   display: block;
   margin-left: 5rem;
-  margin-top: 17rem;
-  font-size: 3.5rem;
+  margin-top: 12rem;
+  font-size: 2.5rem;
   z-index: 1;
   font-family: "M PLUS 1", sans-serif;
-  transition: all 1s;
-  white-space: pre-line;
-  font-weight: lighter;
-}
-
-.photo-text:hover {
-  color: rgb(138, 85, 224);
 }
 
 /* ABOUT-PAGE STYLES BELOW*/
@@ -113,8 +122,8 @@ body {
 }
 
 .title {
-  padding-bottom: 2.5rem;
-  padding-left: 5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 5rem;
   font-size: 3rem;
   font-family: "M PLUS 1", sans-serif;
   color: #aab6e9;
@@ -150,8 +159,8 @@ body {
 }
 
 .about-me-text-div {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
   width: 100%;
   line-height: 1.3rem;
 }
@@ -169,8 +178,8 @@ body {
 }
 
 .info-text1 {
-  padding-right: 2rem;
-  padding-bottom: 4rem;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
 }
 
 /* ASIDE STYLES BELOW */
@@ -208,7 +217,7 @@ body {
 }
 
 .aside-element ul li:hover {
-  color: rgb(138, 85, 224);
+  color: #392bff;
 }
 
 .aside-element ul:last-child {
@@ -253,18 +262,17 @@ body {
 /* CONTACT-PAGE STYLES BELOW */
 
 .contact-page {
-  padding-left: 5rem;
   width: 100%;
-}
-
-.map {
-  height: 29rem;
-  margin-bottom: 15rem;
-  margin-left: 7rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/mapsssson.jpeg);
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-form {
   width: 32rem;
+  margin-left: 5rem;
 }
 
 .contact-form input {
@@ -276,7 +284,6 @@ body {
 .contact-form label {
   margin-top: 0.6rem;
   margin-bottom: 0.3rem;
-
   font-weight: bold;
 }
 

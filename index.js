@@ -102,15 +102,14 @@ function scrollRight(e) {
 }
 
 let i = 0;
-let text = `Elin Falk,
- front end-devloper`;
+let text = `front end-devloper`;
 let speed = 100;
 
 console.log(text);
 
 function typeWriter() {
   if (i < text.length) {
-    document.querySelector(".photo-text").innerHTML += text.charAt(i);
+    document.querySelector(".h2").innerHTML += text.charAt(i);
     i++;
 
     setTimeout(typeWriter, speed);

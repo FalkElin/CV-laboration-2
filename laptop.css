@@ -1,0 +1,36 @@
+/* NOTES!
+Following styling is showed on screens equal or smaller than 1024px.
+*/
+
+@media (max-width: 1024px) {
+  .photo-text h1 {
+    font-size: 9rem;
+    line-height: 4.5rem;
+  }
+  .photo-text h2 {
+    font-size: 2rem;
+  }
+  .CVphoto {
+    width: 100%;
+  }
+
+  .photo-text {
+    margin-top: 16rem;
+    margin-left: 3.5rem;
+  }
+
+  .about-me-text-div {
+    margin-left: 3.5rem;
+    margin-right: 5rem;
+    width: 90%;
+    line-height: 1.3rem;
+  }
+
+  .title {
+    margin-left: 3.5rem;
+  }
+
+  .contact-form {
+    margin-left: 3.5rem;
+  }
+}
