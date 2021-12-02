@@ -327,7 +327,7 @@ h2:hover {
 .contact-page {
   width: 100%;
   min-height: 100vh;
-  background-image: url(/images/mapsssson.jpeg);
+  background-image: url(./images/mapsssson.jpeg);
   background-position: center;
   background-size: cover;
 }
