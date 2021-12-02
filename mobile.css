@@ -2,43 +2,45 @@
 Following styling is showed on screens equal or smaller than 576px.
 */
 
-@media (max-width: 576px) {
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .about-img-div img {
-    height: 12rem;
-  }
-
-  .portfolio-photo-div img {
-    height: 30rem;
-  }
-  .contact-form {
-    width: 24rem;
-  }
-
-  .contact-info-text {
-    width: 23rem;
-  }
-
-  .photo-text h1 {
-    font-size: 3.5rem;
-    line-height: 5rem;
-  }
-
-  .photo-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .photo-text {
-    margin-left: 3rem;
+@media (max-width: 411px) {
+  .header ul li {
+    padding: 0.3rem;
+    width: 4rem;
+    font-size: 11px;
   }
 
   .about-me-text-div {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    width: 100%;
-    line-height: 1.3rem;
+    flex-direction: column;
+  }
+
+  .photo-text {
+    margin-top: 8rem;
+  }
+
+  .page-divs {
+    overflow-y: scroll;
+  }
+  .contact-form {
+    width: 17rem;
+  }
+
+  .contact-form input {
+    height: 2rem;
+  }
+  .contact-form input:last-child {
+    padding-bottom: 15rem;
+  }
+  .contact-info-text {
+    width: 17rem;
+  }
+
+  .portfolio-info-text {
+    width: 17rem;
+  }
+  .portfolio-photo-div img {
+    height: 18rem;
+  }
+  .portfolio-photo-div {
+    height: 18rem;
   }
 }

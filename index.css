@@ -18,7 +18,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: rgb(34, 34, 34);
-
   padding-left: 13rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -72,6 +71,15 @@ body {
 .grayscale {
   filter: grayscale(1);
 }
+/* HIDDEN SCROLL-DIV BELOW */
+
+.hidden-scroll-div {
+  position: absolute;
+  visibility: hidden;
+  bottom: 0;
+  padding-left: 10rem;
+  height: 4.5rem;
+}
 
 /*HEADER STYLES BELOW - OBS ONLY VISIBLE ON 768PX SCREEN OR SMALLER*/
 
@@ -79,6 +87,7 @@ body {
   height: 5rem;
   align-self: center;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .header {
@@ -166,7 +175,7 @@ h2:hover {
 /* ABOUT-PAGE STYLES BELOW*/
 
 .page-divs {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   justify-content: center;
   width: 100%;
@@ -192,6 +201,7 @@ h2:hover {
 .about-img-div img {
   height: 22rem;
   object-fit: contain;
+  object-position: center;
 }
 
 .hidden-image-style {
@@ -203,6 +213,8 @@ h2:hover {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about-img-div::-webkit-scrollbar {
@@ -239,6 +251,7 @@ h2:hover {
   height: 20em;
   width: auto;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .aside-element {
@@ -299,6 +312,7 @@ h2:hover {
   height: 35rem;
   width: 100%;
   display: flex;
+  margin-bottom: 5rem;
 }
 .portfolio-photo-div::-webkit-scrollbar {
   width: 0 !important;
@@ -312,15 +326,17 @@ h2:hover {
 
 .contact-page {
   width: 100%;
-  overflow: hidden;
+  min-height: 100vh;
   background-image: url(/images/mapsssson.jpeg);
   background-position: center;
   background-size: cover;
 }
 
 .contact-form {
-  width: 32rem;
+  width: 40rem;
   margin-left: 5rem;
+  color: #cfdfd7;
+  margin-bottom: 2rem;
 }
 
 .contact-form input {
@@ -335,14 +351,21 @@ h2:hover {
   padding-bottom: 1rem;
 }
 
-.contact-form label {
+.contact-form input {
   margin-top: 0.6rem;
   margin-bottom: 0.3rem;
-  font-weight: bold;
+  font-weight: lighter;
+  padding-left: 0.7rem;
+  color: #68b18c;
 }
 
 .contact-form input:last-child {
-  height: 20rem;
+  padding-bottom: 20rem;
+  padding-top: 1rem;
+}
+
+.contact-form input::placeholder {
+  color: #0f172f;
 }
 
 .leftarrow {

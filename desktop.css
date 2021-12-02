@@ -24,4 +24,7 @@ Following styling is showed on screens equal or smaller than 1366px.
     position: relative;
     padding-top: 3rem;
   }
+  .title {
+    margin-top: 2rem;
+  }
 }

@@ -1,0 +1,103 @@
+/* NOTES!
+Following styling is showed on screens equal or smaller than 576px.
+*/
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .about-img-div img {
+    height: 12rem;
+  }
+
+  .portfolio-photo-div img {
+    height: 30rem;
+  }
+  .contact-form {
+    width: 24rem;
+    margin-left: 1rem;
+  }
+
+  .contact-info-text {
+    width: 23rem;
+  }
+
+  .photo-text h1 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+
+  .photo-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .photo-text {
+    margin-left: 1rem;
+  }
+
+  .title {
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+
+  .about-img-div img {
+    height: 12rem;
+    object-fit: contain;
+  }
+
+  .about-img-div {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .hidden-scroll-div {
+    height: 3.8rem;
+  }
+
+  .header {
+    height: 3.8rem;
+  }
+
+  .about-me-text-div {
+    padding-left: 1rem;
+    padding-right: 2rem;
+    line-height: 1.2rem;
+  }
+
+  .info-text1,
+  .info-text2 {
+    font-size: 13px;
+  }
+
+  .info-text1 {
+    margin-right: 0.5rem;
+  }
+
+  .portfolio-info-text {
+    font-size: 13px;
+  }
+
+  .contact-info-text {
+    font-size: 13px;
+  }
+
+  .portfolio-photo-div img {
+    height: 20rem;
+  }
+  .portfolio-photo-div {
+    height: 20rem;
+  }
+
+  .headerlogo {
+    height: 4rem;
+  }
+
+  .header ul li {
+    padding: 0.3rem;
+    width: 5.5rem;
+    font-size: 12px;
+  }
+}

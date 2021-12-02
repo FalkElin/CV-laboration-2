@@ -18,15 +18,12 @@ Following styling is showed on screens equal or smaller than 992px.
     font-size: 2rem;
   }
 
-  .about-img-div img {
-    height: 15rem;
-  }
-
-  .portfolio-photo-div img {
-    height: 33rem;
-  }
   .contact-form {
     width: 25.5rem;
+  }
+
+  .about-me-text-div {
+    padding-right: 2rem;
   }
 
   .contact-info-text {

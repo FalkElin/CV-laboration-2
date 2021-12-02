@@ -6,14 +6,32 @@ function main() {
 
 /** declares events like onclick, onmouseleave on specified elements */
 function addEventListeners() {
+  let aboutButton2 = document.getElementsByClassName("aboutbutton2");
+  for (let i = 0; i < aboutButton2.length; i++) {
+    aboutButton2[i].onclick = () =>
+      scrollToSection("hidden-scroll-div-about-page");
+  }
+
   let aboutButton = document.getElementsByClassName("aboutbutton");
   for (let i = 0; i < aboutButton.length; i++) {
     aboutButton[i].onclick = () => scrollToSection("about-page");
   }
 
+  let portfolioButton2 = document.getElementsByClassName("portfoliobutton2");
+  for (let i = 0; i < portfolioButton2.length; i++) {
+    portfolioButton2[i].onclick = () =>
+      scrollToSection("hidden-scroll-div-portfolio-page");
+  }
+
   let portfolioButton = document.getElementsByClassName("portfoliobutton");
   for (let i = 0; i < portfolioButton.length; i++) {
     portfolioButton[i].onclick = () => scrollToSection("portfolio-page");
+  }
+
+  let contactButton2 = document.getElementsByClassName("contactbutton2");
+  for (let i = 0; i < contactButton2.length; i++) {
+    contactButton2[i].onclick = () =>
+      scrollToSection("hidden-scroll-div-contact-page");
   }
 
   let contactButton = document.getElementsByClassName("contactbutton");
@@ -24,6 +42,11 @@ function addEventListeners() {
   let homebutton = document.getElementsByClassName("homebutton");
   for (let i = 0; i < homebutton.length; i++) {
     homebutton[i].onclick = () => scrollToSection("home-page");
+  }
+
+  let logo = document.getElementsByClassName("logoscroll");
+  for (let i = 0; i < logo.length; i++) {
+    logo[i].onclick = () => scrollToSection("home-page");
   }
 
   typeWriter();
