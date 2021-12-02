@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="tablet.css" />
     <link rel="stylesheet" href="mobile.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bangers&family=M+PLUS+1:wght@900&family=Praise&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Chonburi&family=Frank+Ruhl+Libre&family=M+PLUS+1:wght@900&family=Praise&display=swap");
     </style>
     <script
       src="https://kit.fontawesome.com/866be69ded.js"
@@ -21,13 +21,22 @@
     ></script>
   </head>
   <body>
+    <header class="flex header">
+      <img class="headerlogo" src="./images/newlogo.png" alt="" srcset="" />
+      <ul class="flex">
+        <li class="homebutton">Home</li>
+        <li class="aboutbutton">About me</li>
+        <li class="portfoliobutton">Portfolio</li>
+        <li class="contactbutton">Contact</li>
+      </ul>
+    </header>
     <aside class="flex column aside-element">
-      <img class="logo" src="./images/logo7.png" alt="" srcset="" />
+      <img class="logo" src="./images/newlogo4.png" alt="" srcset="" />
       <ul>
-        <li id="homebutton">Home</li>
-        <li id="aboutbutton">About me</li>
-        <li id="portfoliobutton">Portfolio</li>
-        <li id="contactbutton">Contact</li>
+        <li class="homebutton">Home</li>
+        <li class="aboutbutton">About me</li>
+        <li class="portfoliobutton">Portfolio</li>
+        <li class="contactbutton">Contact</li>
       </ul>
     </aside>
     <div id="home-page" class="CVphoto-div flex">
@@ -41,7 +50,7 @@
         src="./images/CVphoto.jpeg"
       />
     </div>
-    <div id="about-page" class="flex column about-div">
+    <div id="about-page" class="flex column page-divs">
       <h3 id="title" class="title">About me</h3>
       <div class="flex about-me-text-div">
         <div class="info-text1 flex column">
@@ -90,7 +99,7 @@
         <i class="fas fa-chevron-right arrow-button-right rightarrow"></i>
       </div>
     </div>
-    <div id="portfolio-page" class="flex column about-div">
+    <div id="portfolio-page" class="flex column page-divs">
       <h3 id="title2" class="title">Portfolio</h3>
       <div class="flex about-me-text-div">
         <div class="portfolio-info-text flex column">
@@ -122,10 +131,10 @@
         <i class="fas fa-chevron-right arrow-button-right rightarrow"></i>
       </div>
     </div>
-    <div id="contact-page" class="contact-page flex column about-div">
+    <div id="contact-page" class="contact-page flex column page-divs">
       <h3 id="title2" class="title">Contact me</h3>
       <div class="flex about-me-text-div">
-        <div class="portfolio-info-text flex column">
+        <div class="contact-info-text flex column">
           <h4>Send a message</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae

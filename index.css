@@ -18,7 +18,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: rgb(34, 34, 34);
-  color: #aab6e9;
+
   padding-left: 13rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -73,6 +73,51 @@ body {
   filter: grayscale(1);
 }
 
+/*HEADER STYLES BELOW - OBS ONLY VISIBLE ON 768PX SCREEN OR SMALLER*/
+
+.headerlogo {
+  height: 5rem;
+  align-self: center;
+  object-fit: cover;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  background-color: rgb(17, 17, 17);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5rem;
+  overflow: hidden;
+  visibility: hidden;
+  color: #4c8167;
+}
+.header ul li:hover {
+  color: #c4ff7c;
+}
+.header ul li {
+  display: flex;
+  list-style: none;
+  padding: 0.7rem;
+  border-right: 0.1rem solid rgb(61, 61, 61);
+  width: 7rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 100;
+  transition: all 0.15s;
+  font-size: 0.9rem;
+}
+
+.header ul li:first-child {
+  border-left: 0.1rem solid rgb(61, 61, 61);
+}
+
+.header ul {
+  margin: 0 auto;
+}
+
 /* HOMEPAGE STYLES BELOW*/
 
 .CVphoto {
@@ -87,38 +132,44 @@ body {
 }
 
 .photo-text h1 {
-  font-size: 13rem;
-  font-family: "Praise", cursive;
-  color: rgb(198, 202, 255);
+  font-size: 8rem;
+  font-family: "Chonburi", cursive;
+  color: #9dbf6f;
   font-weight: unset;
   transition: all 1s;
-  line-height: 9rem;
+  line-height: 8rem;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+    0px -5px 10px rgba(255, 255, 255, 0.15);
 }
 
 .photo-text h2 {
   transition: all 1s;
+  font-size: 3rem;
+  color: #68b18c;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
+    0px -5px 10px rgba(255, 255, 255, 0.15);
 }
 
 .photo-text h1:hover,
 h2:hover {
-  color: #7859ff;
+  color: #c4ff7c;
 }
 
 .photo-text {
   display: block;
   margin-left: 5rem;
-  margin-top: 12rem;
-  font-size: 2.5rem;
+  margin-top: 14rem;
   z-index: 1;
-  font-family: "M PLUS 1", sans-serif;
+  font-family: "Frank Ruhl Libre", serif;
 }
 
 /* ABOUT-PAGE STYLES BELOW*/
 
-.about-div {
+.page-divs {
   height: 100vh;
   position: relative;
-  padding-top: 5rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .title {
@@ -126,7 +177,7 @@ h2:hover {
   margin-left: 5rem;
   font-size: 3rem;
   font-family: "M PLUS 1", sans-serif;
-  color: #aab6e9;
+  color: #9dbf6f;
   transition: all 2s;
 }
 
@@ -135,7 +186,7 @@ h2:hover {
 }
 
 .title:hover {
-  color: rgb(138, 85, 224);
+  color: #c4ff7c;
 }
 
 .about-img-div img {
@@ -159,8 +210,8 @@ h2:hover {
 }
 
 .about-me-text-div {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   width: 100%;
   line-height: 1.3rem;
 }
@@ -168,13 +219,13 @@ h2:hover {
 .about-me-text-div h4 {
   letter-spacing: 0.1rem;
   line-height: 2rem;
-  color: #ffffff;
+  color: #68b18c;
   font-weight: bolder;
 }
 
 .info-text1,
 .info-text2 {
-  color: whitesmoke;
+  color: #cfdfd7;
 }
 
 .info-text1 {
@@ -185,9 +236,9 @@ h2:hover {
 /* ASIDE STYLES BELOW */
 
 .logo {
-  height: 10em;
+  height: 20em;
   width: auto;
-  margin-bottom: 10rem;
+  object-fit: cover;
 }
 
 .aside-element {
@@ -199,15 +250,19 @@ h2:hover {
   right: auto;
   bottom: 0;
   background-color: rgb(31, 31, 31);
-  color: rgb(182, 182, 182);
+  color: #4c8167;
   overflow: hidden;
+}
+
+.aside-element ul {
+  margin: auto;
 }
 
 .aside-element ul li {
   display: flex;
   list-style: none;
   padding: 2rem;
-  border-top: 0.1rem solid rgb(75, 75, 75);
+  border-top: 0.1rem solid #2d3821;
   width: 13rem;
   align-items: center;
   justify-content: center;
@@ -217,24 +272,18 @@ h2:hover {
 }
 
 .aside-element ul li:hover {
-  color: #392bff;
+  color: #c4ff7c;
 }
 
 .aside-element ul:last-child {
-  border-bottom: 0.1rem solid rgb(75, 75, 75);
+  border-bottom: 0.1rem solid #2d3821;
 }
 
 /* PORTFOLIOPAGE STYLES BELOW */
 
-.portfolio-page {
-  height: 100vh;
-  position: relative;
-  padding-top: 5rem;
-}
-
 .portfolio-info-text {
   width: 40rem;
-  color: whitesmoke;
+  color: #cfdfd7;
   padding-bottom: 3rem;
 }
 
@@ -264,7 +313,6 @@ h2:hover {
 .contact-page {
   width: 100%;
   overflow: hidden;
-  position: relative;
   background-image: url(/images/mapsssson.jpeg);
   background-position: center;
   background-size: cover;
@@ -277,8 +325,14 @@ h2:hover {
 
 .contact-form input {
   height: 2.5rem;
-  background-color: white;
+  background-color: #cfdfd7;
   border: none;
+}
+
+.contact-info-text {
+  width: 40rem;
+  color: #cfdfd7;
+  padding-bottom: 1rem;
 }
 
 .contact-form label {

@@ -4,12 +4,11 @@ Following styling is showed on screens equal or smaller than 1366px.
 
 @media (max-width: 1366px) {
   .photo-text h1 {
-    font-size: 10rem;
-    line-height: 4.5rem;
+    font-size: 6rem;
+    line-height: 7rem;
   }
   .photo-text h2 {
-    font-size: 2.5rem;
-    line-height: 8rem;
+    font-size: 2rem;
   }
   .CVphoto {
     width: 100%;
@@ -18,5 +17,11 @@ Following styling is showed on screens equal or smaller than 1366px.
   .photo-text {
     margin-top: 16rem;
     font-size: 3rem;
+  }
+
+  .about-div {
+    height: 100vh;
+    position: relative;
+    padding-top: 3rem;
   }
 }

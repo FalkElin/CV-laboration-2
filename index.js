@@ -6,17 +6,25 @@ function main() {
 
 /** declares events like onclick, onmouseleave on specified elements */
 function addEventListeners() {
-  const aboutbutton = document.getElementById("aboutbutton");
-  aboutbutton.onclick = () => scrollToSection("about-page");
+  let aboutButton = document.getElementsByClassName("aboutbutton");
+  for (let i = 0; i < aboutButton.length; i++) {
+    aboutButton[i].onclick = () => scrollToSection("about-page");
+  }
 
-  const portfoliobutton = document.getElementById("portfoliobutton");
-  portfoliobutton.onclick = () => scrollToSection("portfolio-page");
+  let portfolioButton = document.getElementsByClassName("portfoliobutton");
+  for (let i = 0; i < portfolioButton.length; i++) {
+    portfolioButton[i].onclick = () => scrollToSection("portfolio-page");
+  }
 
-  const contactbutton = document.getElementById("contactbutton");
-  contactbutton.onclick = () => scrollToSection("contact-page");
+  let contactButton = document.getElementsByClassName("contactbutton");
+  for (let i = 0; i < contactButton.length; i++) {
+    contactButton[i].onclick = () => scrollToSection("contact-page");
+  }
 
-  const homebutton = document.getElementById("homebutton");
-  homebutton.onclick = () => scrollToSection("home-page");
+  let homebutton = document.getElementsByClassName("homebutton");
+  for (let i = 0; i < homebutton.length; i++) {
+    homebutton[i].onclick = () => scrollToSection("home-page");
+  }
 
   typeWriter();
 
