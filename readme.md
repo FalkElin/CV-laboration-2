@@ -1,4 +1,4 @@
-# javascript-laboration-1
+# javascript-laboration-2
 
 FEDG21
 Kurs: JavaScript - grundkurs, 60 yhp
