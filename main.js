@@ -115,6 +115,9 @@ function handleScroll(e) {
   if (scroll === right) {
     rightArrow.classList.remove("hidden-arrow-style");
   }
+  if (scroll === left) {
+    rightArrow.classList.remove("hidden-arrow-style");
+  }
 }
 
 function showArrow(e) {}
