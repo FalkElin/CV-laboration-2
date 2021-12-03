@@ -96,7 +96,7 @@ function changeImageBackOnHover() {
 
 //Scroll function shows and hides arrows
 function handleScroll(e) {
-  const offset = 50;
+  const offset = 0;
   const left = 0;
   const right = e.target.scrollWidth - e.target.clientWidth;
   const scroll = e.target.scrollLeft;
@@ -109,17 +109,15 @@ function handleScroll(e) {
     leftArrow.classList.remove("hidden-arrow-style");
   }
 
-  if (scroll === left) {
+  if (scroll > offset) {
     rightArrow.classList.add("hidden-arrow-style");
   }
   if (scroll === right) {
     rightArrow.classList.remove("hidden-arrow-style");
-  } else if (scroll > offset) {
-    rightArrow.classList.add("hidden-arrow-style");
-  } else {
-    rightArrow.classList.remove("hidden-arrow-style");
   }
 }
+
+function showArrow(e) {}
 
 //makes arrow onclick scroll left or right
 function scrollLeft(e) {

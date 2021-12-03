@@ -43,4 +43,24 @@ Following styling is showed on screens equal or smaller than 576px.
   .portfolio-photo-div {
     height: 18rem;
   }
+
+  .scrollicon-portfolio {
+    margin-top: 18rem;
+  }
+  .header ul li {
+    padding: 0;
+    width: 3.5rem;
+    font-size: 11px;
+  }
+  .header ul li:hover {
+    font-size: 12px;
+  }
+
+  .headerlogo {
+    height: 4rem;
+    width: 3.5rem;
+    align-self: center;
+    object-fit: cover;
+    cursor: pointer;
+  }
 }

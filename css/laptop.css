@@ -73,6 +73,17 @@ Following styling is showed on screens equal or smaller than 1024px.
   }
 
   .portfolio-photo-div {
+    height: 32rem;
+  }
+  .portfolio-photo-div img {
     height: 30rem;
+  }
+
+  .scrollicon {
+    margin-top: 16rem;
+  }
+
+  .scrollicon-portfolio {
+    margin-top: 31rem;
   }
 }

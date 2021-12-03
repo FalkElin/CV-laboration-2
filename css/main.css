@@ -104,6 +104,7 @@ body {
 }
 .header ul li:hover {
   color: #c4ff7c;
+  font-size: 1rem;
 }
 .header ul li {
   display: flex;
@@ -214,7 +215,6 @@ h2:hover {
   overflow-y: hidden;
   scroll-behavior: smooth;
   margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .about-img-div::-webkit-scrollbar {
@@ -248,10 +248,11 @@ h2:hover {
 /* ASIDE STYLES BELOW */
 
 .logo {
-  height: 20em;
+  height: 20rem;
   width: auto;
   object-fit: cover;
   cursor: pointer;
+  top: 0;
 }
 
 .aside-element {
@@ -286,6 +287,7 @@ h2:hover {
 
 .aside-element ul li:hover {
   color: #c4ff7c;
+  font-size: 1.1rem;
 }
 
 .aside-element ul:last-child {
@@ -320,6 +322,7 @@ h2:hover {
 
 .portfolio-photo-div img {
   object-fit: cover;
+  height: 35rem;
 }
 
 /* CONTACT-PAGE STYLES BELOW */
@@ -327,7 +330,7 @@ h2:hover {
 .contact-page {
   width: 100%;
   min-height: 100vh;
-  background-image: url(./images/mapsssson.jpeg);
+  background-image: url(/images/mapsssson.jpeg);
   background-position: center;
   background-size: cover;
 }
@@ -368,6 +371,8 @@ h2:hover {
   color: #0f172f;
 }
 
+/* ARROW STYLES BELOW */
+
 .leftarrow {
   position: absolute;
   color: #ffffff;
@@ -407,4 +412,38 @@ h2:hover {
 .leftarrow:hover {
   font-size: xx-large;
   color: rgba(255, 255, 255, 0.808);
+}
+
+.scrollicon {
+  position: absolute;
+  color: #68b18c;
+  right: 0;
+  font-size: 0.8rem;
+  margin-right: 0.2rem;
+  margin-top: 24rem;
+  letter-spacing: 0.05rem;
+  font-weight: 100;
+}
+
+.scrollicon i {
+  color: #68b18c;
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.scrollicon-portfolio {
+  position: absolute;
+  color: #68b18c;
+  right: 0;
+  font-size: 0.8rem;
+  margin-right: 0.2rem;
+  margin-top: 36rem;
+  letter-spacing: 0.05rem;
+  font-weight: 100;
+}
+
+.scrollicon-portfolio i {
+  color: #68b18c;
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
 }

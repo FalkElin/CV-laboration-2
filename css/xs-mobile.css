@@ -1,0 +1,11 @@
+@media (max-width: 319px) {
+  .headerlogo {
+    height: 4rem;
+  }
+
+  .header ul li {
+    padding: 0.3rem;
+    width: 5.5rem;
+    font-size: 12px;
+  }
+}

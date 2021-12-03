@@ -100,4 +100,24 @@ Following styling is showed on screens equal or smaller than 576px.
     width: 5.5rem;
     font-size: 12px;
   }
+
+  .rightarrow:hover,
+  .leftarrow:hover {
+    font-size: 1.2rem;
+  }
+
+  .rightarrow,
+  .leftarrow {
+    font-size: 1rem;
+  }
+  .header ul li:hover {
+    font-size: 13px;
+  }
+  .scrollicon {
+    margin-top: 13rem;
+  }
+
+  .scrollicon-portfolio {
+    margin-top: 20rem;
+  }
 }
