@@ -8,7 +8,7 @@ UPPGIFTSBESKRIVNING
 
 - Skapa ett interaktivt digitalt CV där du presenterar dig själv och dina kunskaper.
 
-[demo](https://falkelin.github.io/javascript-laboration-1/)
+[demo](https://falkelin.github.io/CV-laboration-2/)
 
 GOOD TO KNOW BELOW:
 
